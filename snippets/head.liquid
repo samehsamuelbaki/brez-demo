@@ -74,11 +74,11 @@
   {%- endif -%}
 
   {%- liquid
-    assign heading_font = settings.type_header_font
-    assign subheading_font = settings.type_subheading_font
-    assign base_font = settings.type_base_font
-    assign nav_font = settings.type_nav_font
-    assign btn_font = settings.type_btn_font
+    assign heading_font = false
+    assign base_font = false
+    assign nav_font = false
+    assign btn_font = false
+    assign subheading_font = false
 
     assign base_font_bold = base_font | font_modify: 'weight', 'bolder'
     assign base_font_100 = base_font | font_modify: 'weight', '+100'
