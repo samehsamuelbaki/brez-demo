@@ -1,0 +1,23 @@
+:root {
+    --FONT-STACK-HEADING: "Bellefair", serif!important;
+}
+
+.navlink--grandchild {
+    text-transform: none;
+    letter-spacing: 0px!important;
+}
+
+body:has(.main-content>.shopify-section.section-overlay-header:first-of-type):not(:has([data-prevent-transparent-header])) [data-header-transparent]:not(.meganav--visible):not(.js__header__stuck) .theme__header.has-border {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+@media only screen and (min-width: 990px) {
+    .grid--slider {
+        --item-width: calc((70vw - var(--scrollbar-width) - var(--outer)* 2)* .28)!important;
+    }
+}
+
+.navlink--cart--icon .header__cart__status {
+    color: white!important;
+}
