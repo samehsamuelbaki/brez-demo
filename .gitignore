@@ -34,3 +34,5 @@ dist/
 
 # Optional: Ignore local configuration or customization files
 #config/settings_data.json
+
+config.yml
