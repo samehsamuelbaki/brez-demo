@@ -439,8 +439,8 @@
     --FONT-UPPERCASE-HEADING: {{ heading_font_uppercase }};
     --LETTER-SPACING-HEADING: {{ settings.heading_letter_spacing | divided_by: 1000.0 | append: 'em' }};
 
-    --FONT-STACK-SUBHEADING: {{ subheading_font.family }}, {{ subheading_font.fallback_families }};
-    --FONT-WEIGHT-SUBHEADING: {{ subheading_font.weight }};
+    --FONT-STACK-SUBHEADING: 'PP Eiko', serif;
+    --FONT-WEIGHT-SUBHEADING: 900;
     --FONT-STYLE-SUBHEADING: {{ subheading_font.style }};
     --FONT-SIZE-SUBHEADING-DESKTOP: {{ settings.subheading_size_desktop | append: 'px' }};
     --FONT-SIZE-SUBHEADING-MOBILE: {{ settings.subheading_size_mobile | append: 'px' }};
@@ -448,9 +448,9 @@
     --FONT-UPPERCASE-SUBHEADING: {{ subheading_font_uppercase }};
     --LETTER-SPACING-SUBHEADING: {{ settings.sub_letter_spacing | divided_by: 1000.0 | append: 'em' }};
 
-    --FONT-STACK-NAV: {{ nav_font.family }}, {{ nav_font.fallback_families }};
-    --FONT-WEIGHT-NAV: {{ nav_font.weight }};
-    --FONT-WEIGHT-NAV-BOLD: {{ nav_font_bold.weight | default: 700 }};
+    --FONT-STACK-NAV: 'PP Fragment', sans-serif;
+    --FONT-WEIGHT-NAV: 400;
+    --FONT-WEIGHT-NAV-BOLD: 700;
     --FONT-STYLE-NAV: {{ nav_font.style }};
     --FONT-SIZE-NAV: {{ settings.nav_font_size | append: 'px' }};
 
