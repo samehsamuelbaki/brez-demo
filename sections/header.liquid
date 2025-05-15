@@ -255,6 +255,7 @@
       </cart-count>
 
       {%- if cart_icon_as_circle == false -%}
+        {{icon_string_cart}}aaa
         {%- render 'header-icon', filename: icon_string_cart -%}
       {%- endif -%}
     </span>
@@ -570,6 +571,13 @@
   <script src="{{ 'ticker.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
+<style>
+  .header__wrapper[data-section-id="{{ section.id }}"] .navlink {
+    font-size: 1.13rem;
+    letter-spacing: 0px;
+  }
+</style>
+
 <div class="header__wrapper"
   data-header-wrapper
   {% if transparent_header %}data-header-transparent{% endif %}
@@ -751,7 +759,8 @@
       "default": "bag",
       "options": [
         { "value": "bag", "label": "Bag" },
-        { "value": "cart", "label": "Cart" }
+        { "value": "cart", "label": "Cart" },
+        { "value": "new-cart", "label": "New for Brez" }
       ]
     },
     {

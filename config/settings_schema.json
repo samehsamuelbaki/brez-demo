@@ -198,14 +198,10 @@
         "default": "poppins_n4"
       },
       {
-        "type": "range",
+        "type": "number",
         "id": "nav_font_size",
-        "min": 10,
-        "max": 50,
-        "step": 1,
-        "unit": "px",
         "label": "Font size",
-        "default": 16
+        "default": 1
       },
       {
         "type": "range",
