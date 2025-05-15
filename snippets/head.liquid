@@ -425,16 +425,16 @@
     --FONT-HEADING-LARGE-MOBILE: {{ settings.heading_large_mobile | append: 'px' }};
     --FONT-HEADING-X-LARGE-MOBILE: {{ settings.heading_x_large_mobile | append: 'px' }};
 
-    --FONT-STACK-BODY: {{ base_font.family }}, {{ base_font.fallback_families }};
-    --FONT-STYLE-BODY: {{ base_font.style }};
-    --FONT-WEIGHT-BODY: {{ base_font.weight }};
-    --FONT-WEIGHT-BODY-BOLD: {{ base_font_bold.weight | default: 700 }};
+    --FONT-STACK-BODY: 'PP Fragment', sans-serif;
+    --FONT-STYLE-BODY: normal;
+    --FONT-WEIGHT-BODY: 400;
+    --FONT-WEIGHT-BODY-BOLD: 700;
 
     --LETTER-SPACING-BODY: {{ settings.body_letter_spacing | divided_by: 1000.0 | append: 'em' }};
 
-    --FONT-STACK-HEADING: {{ heading_font.family }}, {{ heading_font.fallback_families }};
-    --FONT-WEIGHT-HEADING: {{ heading_font.weight }};
-    --FONT-STYLE-HEADING: {{ heading_font.style }};
+    --FONT-STACK-HEADING: 'PP Eiko', serif;
+    --FONT-WEIGHT-HEADING: 500;
+    --FONT-STYLE-HEADING: normal;
 
     --FONT-UPPERCASE-HEADING: {{ heading_font_uppercase }};
     --LETTER-SPACING-HEADING: {{ settings.heading_letter_spacing | divided_by: 1000.0 | append: 'em' }};
