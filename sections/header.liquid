@@ -570,6 +570,12 @@
   <script src="{{ 'ticker.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
+<style>
+  .header__wrapper[data-section-id="{{ section.id }}"] {
+    font-size: 500px;
+  }
+</style>
+
 <div class="header__wrapper"
   data-header-wrapper
   {% if transparent_header %}data-header-transparent{% endif %}
