@@ -20,6 +20,9 @@
     <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
   {%- endunless -%}
 
+  {% render 'font-pp-fragment' %}
+  {% render 'font-pp-eiko' %}
+
   <!-- Title and description ================================================ -->
   {% capture seo_title %}
     {% assign title_content = page_title %}
@@ -71,11 +74,11 @@
   {%- endif -%}
 
   {%- liquid
-    assign heading_font = settings.type_header_font
-    assign subheading_font = settings.type_subheading_font
-    assign base_font = settings.type_base_font
-    assign nav_font = settings.type_nav_font
-    assign btn_font = settings.type_btn_font
+    assign heading_font = false
+    assign base_font = false
+    assign nav_font = false
+    assign btn_font = false
+    assign subheading_font = false
 
     assign base_font_bold = base_font | font_modify: 'weight', 'bolder'
     assign base_font_100 = base_font | font_modify: 'weight', '+100'
@@ -138,12 +141,6 @@
 
   <!-- CSS ================================================================== -->
   {% style %}
-
-  {{ heading_font | font_face: font_display: 'swap' }}
-  {{ base_font | font_face: font_display: 'swap' }}
-  {{ nav_font | font_face: font_display: 'swap' }}
-  {{ btn_font | font_face: font_display: 'swap' }}
-  {{ subheading_font | font_face: font_display: 'swap' }}
 
   {% if base_font_bold %}
     {{ base_font_bold | font_face: font_display: 'swap' }}
@@ -428,22 +425,22 @@
     --FONT-HEADING-LARGE-MOBILE: {{ settings.heading_large_mobile | append: 'px' }};
     --FONT-HEADING-X-LARGE-MOBILE: {{ settings.heading_x_large_mobile | append: 'px' }};
 
-    --FONT-STACK-BODY: {{ base_font.family }}, {{ base_font.fallback_families }};
-    --FONT-STYLE-BODY: {{ base_font.style }};
-    --FONT-WEIGHT-BODY: {{ base_font.weight }};
-    --FONT-WEIGHT-BODY-BOLD: {{ base_font_bold.weight | default: 700 }};
+    --FONT-STACK-BODY: 'PP Fragment', sans-serif;
+    --FONT-STYLE-BODY: normal;
+    --FONT-WEIGHT-BODY: 400;
+    --FONT-WEIGHT-BODY-BOLD: 700;
 
     --LETTER-SPACING-BODY: {{ settings.body_letter_spacing | divided_by: 1000.0 | append: 'em' }};
 
-    --FONT-STACK-HEADING: {{ heading_font.family }}, {{ heading_font.fallback_families }};
-    --FONT-WEIGHT-HEADING: {{ heading_font.weight }};
-    --FONT-STYLE-HEADING: {{ heading_font.style }};
+    --FONT-STACK-HEADING: 'PP Eiko', serif;
+    --FONT-WEIGHT-HEADING: 500;
+    --FONT-STYLE-HEADING: normal;
 
     --FONT-UPPERCASE-HEADING: {{ heading_font_uppercase }};
     --LETTER-SPACING-HEADING: {{ settings.heading_letter_spacing | divided_by: 1000.0 | append: 'em' }};
 
-    --FONT-STACK-SUBHEADING: {{ subheading_font.family }}, {{ subheading_font.fallback_families }};
-    --FONT-WEIGHT-SUBHEADING: {{ subheading_font.weight }};
+    --FONT-STACK-SUBHEADING: 'PP Eiko', serif;
+    --FONT-WEIGHT-SUBHEADING: 900;
     --FONT-STYLE-SUBHEADING: {{ subheading_font.style }};
     --FONT-SIZE-SUBHEADING-DESKTOP: {{ settings.subheading_size_desktop | append: 'px' }};
     --FONT-SIZE-SUBHEADING-MOBILE: {{ settings.subheading_size_mobile | append: 'px' }};
@@ -451,9 +448,9 @@
     --FONT-UPPERCASE-SUBHEADING: {{ subheading_font_uppercase }};
     --LETTER-SPACING-SUBHEADING: {{ settings.sub_letter_spacing | divided_by: 1000.0 | append: 'em' }};
 
-    --FONT-STACK-NAV: {{ nav_font.family }}, {{ nav_font.fallback_families }};
-    --FONT-WEIGHT-NAV: {{ nav_font.weight }};
-    --FONT-WEIGHT-NAV-BOLD: {{ nav_font_bold.weight | default: 700 }};
+    --FONT-STACK-NAV: 'PP Fragment', sans-serif;
+    --FONT-WEIGHT-NAV: 400;
+    --FONT-WEIGHT-NAV-BOLD: 700;
     --FONT-STYLE-NAV: {{ nav_font.style }};
     --FONT-SIZE-NAV: {{ settings.nav_font_size | append: 'px' }};
 
@@ -509,8 +506,8 @@
     --ICON-STROKE-WIDTH: {{ settings.icon_style }}px;
 
     /* === Button General ===*/
-    --BTN-FONT-STACK: {{ btn_font.family }}, {{ btn_font.fallback_families }};
-    --BTN-FONT-WEIGHT: {{ btn_font.weight }};
+    --BTN-FONT-STACK: 'PP Fragment', sans-serif;
+    --BTN-FONT-WEIGHT: 400;
     --BTN-FONT-STYLE: {{ btn_font.style }};
     --BTN-FONT-SIZE: {{ settings.btn_size }}px;
 
