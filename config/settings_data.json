@@ -85,6 +85,8 @@
     "free_shipping_limit": "150",
     "show_lock_icon": true,
     "enable_accept_terms": false,
+    "show_empty_cart_menu": false,
+    "empty_cart_menu": "",
     "show_recently_viewed_products": false,
     "currency_code_enable": true,
     "mobile_menu_type": "new",
