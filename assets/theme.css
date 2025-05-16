@@ -24338,3 +24338,36 @@ zoom-images {
   user-select: none;       /* Prevent selection (optional) */
   pointer-events: auto;
 }
+
+.demo-review-block {
+  background-color: #fff;
+  border-radius: 3.5rem;
+  text-align: center;
+  padding: 25px 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.custom_stretch {
+  align-items: stretch;
+}
+
+.custom_stretch .column__inner {
+  height: 100%;
+}
+
+.reviews_summary {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.reviews_summary > div {
+  background-color: #fff;
+  border-radius: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 20px;
+}

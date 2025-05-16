@@ -1,3 +1,4 @@
+
 <!-- /sections/section-multicolumn.liquid -->
 
 {%- render 'multicolumn' -%}
@@ -7,6 +8,18 @@
     "name": "Multicolumn",
     "class": "index-section",
     "settings": [
+      {
+        "type": "checkbox",
+        "id": "reviews",
+        "label": "Reviews",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "stretch",
+        "label": "Stretch",
+        "default": false
+      },
       {
         "type": "header",
         "content": "Typography"
@@ -176,6 +189,38 @@
       }
     ],
     "blocks": [
+      {
+        "type": "review",
+        "name": "Review",
+        "settings": [
+          {
+            "type": "range",
+            "id": "column_width",
+            "label": "Column width",
+            "unit": "%",
+            "min": 10,
+            "max": 100,
+            "step": 1,
+            "default": 33,
+            "info": "Desktop only"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name"
+          }
+        ]
+      },
       {
         "type": "image",
         "name": "Image",
