@@ -44,7 +44,7 @@
     "icon_style": "1",
     "show_gray_bg": false,
     "parallax_enable": true,
-    "parallax_strength": 20,
+    "parallax_strength": 40,
     "product_grid_outline": false,
     "enable_superscript": true,
     "show_scroll_top_button": true,

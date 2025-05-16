@@ -342,8 +342,52 @@
         "layout_mobile": "slider",
         "color_scheme": "scheme-590b0a64-4958-403a-86fc-4b0b784b17ff",
         "padding_top": 30,
-        "padding_bottom": 50,
+        "padding_bottom": 10,
         "heading_tag": "automatic"
+      }
+    },
+    "section_rich_text_dBhjQY": {
+      "type": "section-rich-text",
+      "blocks": {
+        "buttons_NhVPtq": {
+          "type": "buttons",
+          "settings": {
+            "button_text": "TRY BRĒZ TODAY",
+            "button_url": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": true,
+            "padding_bottom": 24
+          }
+        }
+      },
+      "block_order": [
+        "buttons_NhVPtq"
+      ],
+      "custom_css": [
+        "a {padding-left: 70px; padding-right: 70px;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "text-center",
+        "width": "wrapper",
+        "color_scheme": "scheme-590b0a64-4958-403a-86fc-4b0b784b17ff",
+        "overlay_opacity": 0,
+        "show_overlay_text": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_custom_code_Nrh4kJ": {
+      "type": "section-custom-code",
+      "name": "Custom code",
+      "settings": {
+        "code": "<div style=\"display: flex; align-items: center; justify-content: center\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<circle cx=\"9.99976\" cy=\"10\" r=\"9.5\" stroke=\"black\"\/>\n<path d=\"M5.76904 10.7698L9.23058 13.4621L14.6152 6.53906\" stroke=\"black\" stroke-linecap=\"round\" stroke-linejoin=\"round\"\/>\n<\/svg>\n<span style=\"font-size: 0.88rem; padding-left: 5px\">30-Day Money Back Guarantee<\/span>\n<\/div>",
+        "width": "wrapper",
+        "color_scheme": "scheme-590b0a64-4958-403a-86fc-4b0b784b17ff",
+        "padding_top": 0,
+        "padding_bottom": 54
       }
     }
   },
@@ -352,6 +396,8 @@
     "related",
     "section_multicolumn_nb9wgw",
     "section_rich_text_ncKkyx",
-    "section_multicolumn_z6EdBd"
+    "section_multicolumn_z6EdBd",
+    "section_rich_text_dBhjQY",
+    "section_custom_code_Nrh4kJ"
   ]
 }
