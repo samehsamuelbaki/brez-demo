@@ -30,7 +30,90 @@ window.addEventListener('resize', updateIndexProductHeight);
   z-index: -1; /* Put it behind main content */
   pointer-events: none;
 }
+
+.image-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  bottom: 15px;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+}
+
+.image-dots .dot {
+  width: 10px;
+  height: 10px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.image-dots .dot.active {
+  background-color: black;
+}
+
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const slider = document.querySelector('zoom-images');
+  if (!slider) return;
+
+  const slides = slider.querySelectorAll('.product__slide');
+  const arrows = slider.querySelector('.slider__arrows');
+
+  // Create dot container
+  const dotContainer = document.createElement('div');
+  dotContainer.classList.add('image-dots');
+
+  // Create dots
+  slides.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    dot.dataset.index = index;
+    dotContainer.appendChild(dot);
+  });
+
+  // Insert after slider arrows
+  arrows.insertAdjacentElement('afterend', dotContainer);
+
+  const dots = dotContainer.querySelectorAll('.dot');
+
+  function updateActiveDot() {
+    const activeIndex = Array.from(slides).findIndex(slide =>
+      slide.classList.contains('media--active')
+    );
+    dots.forEach(dot => dot.classList.remove('active'));
+    if (dots[activeIndex]) {
+      dots[activeIndex].classList.add('active');
+    }
+  }
+
+  // Sync on load
+  updateActiveDot();
+
+  // Listen to changes (e.g., clicking next/prev)
+  const observer = new MutationObserver(updateActiveDot);
+  slides.forEach(slide => observer.observe(slide, { attributes: true }));
+
+  // Optional: Click on dots to navigate
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const index = Number(dot.dataset.index);
+      slides.forEach(slide => slide.classList.remove('media--active'));
+      if (slides[index]) {
+        slides[index].classList.add('media--active');
+        updateActiveDot();
+      }
+    });
+  });
+});
+
+</script>
 
 {%- liquid
   assign current_variant = product.selected_or_first_available_variant
