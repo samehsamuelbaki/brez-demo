@@ -70,6 +70,13 @@
       {%- endif -%}
     </div>
 
+    {% if current_variant.compare_at_price > current_variant.price %}
+        {% assign discount = current_variant.compare_at_price | minus: current_variant.price %}
+        {% assign discount_percentage = discount | times: 100 | divided_by: current_variant.compare_at_price %}
+        {% assign rounded_discount = discount_percentage | divided_by: 5 | floor | times: 5 %}
+        <div class="__off-percentage">Save over {{ rounded_discount }}% today</div>
+    {% endif %}
+
     {%- liquid
       assign sale_badge = settings.sale_badge
       assign final_sale = settings.final_sale | default: product.metafields.theme.final_sale.value
@@ -91,14 +98,14 @@
           </span>
         {%- endif -%}
 
-        {%- if final_sale or final_sale_variant -%}
+        {% comment %} {%- if final_sale or final_sale_variant -%}
           <div class="product__final-sale-wrap hidden" data-final-sale-badge>
             <div class="product__final-sale">{{ 'products.product.final_sale' | t }}</div>
             <div class="product__final-sale-question" data-tooltip="<div style='--text: var(--COLOR-SALE);'>{{ settings.final_sale_tooltip | replace: '"', "'" }}</div>">
               {%- render 'icon-question' -%}
             </div>
           </div>
-        {%- endif -%}
+        {%- endif -%} {% endcomment %}
       </div>
     {%- endif -%}
   </div>

@@ -309,6 +309,12 @@
                   {%- when 'accordion' -%}
                     {%- render 'product-description' product: product, block: block, block_style: block_style -%}
 
+                  {%- when 'review' -%}
+                    {%- render 'demo-review' -%}
+
+                  {%- when 'bundle' -%}
+                    {%- render 'demo-bundle' block: block -%}
+
                   {%- when 'inventory_countdown' -%}
                     {%- render 'product-inventory' product: product, block: block, block_style: block_style -%}
 
@@ -814,6 +820,45 @@
     "blocks": [
       {
         "type": "@app"
+      },
+      {
+        "type": "review",
+        "name": "Review Count"
+      },
+      {
+        "type": "bundle",
+        "name": "Bundle Type 1",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "text_gift",
+            "label": "Gift",
+            "default": "4-Pack"
+          },
+          {
+            "type": "text",
+            "id": "text_gift_price",
+            "label": "Gift Price",
+            "default": "FREE"
+          },
+          {
+            "type": "text",
+            "id": "text_gift_unit",
+            "label": "Gift Unit",
+            "default": "Shots"
+          },
+          {
+            "type": "text",
+            "id": "text_gift_value",
+            "label": "Gift Value",
+            "default": "$24 Value"
+          }
+        ]
       },
       {
         "type": "title",

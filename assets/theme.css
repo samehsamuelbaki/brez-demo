@@ -24234,3 +24234,107 @@ body.has-header-sticky .timeline {
 }
 
 /*! ============ Add any custom styles below this line ================== */
+.review-wrapper .review-star-icon {
+  width: 0.94em;
+  height: 0.94em;
+}
+
+.review-wrapper .reviews {
+  font-size: 0.88rem;
+}
+
+.review-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.product__title {
+  font-size: 2.25rem;
+}
+
+.__off-percentage {
+  background: linear-gradient(45deg, #B4FFC4 0%, #C4FFA7 32%, #5BFAFF 100%);
+  border-radius: 1rem;
+  font-size: .94rem;
+  padding: 4px 10px;
+  margin-inline-start: 10px;
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 990px) {
+  .product__content {
+    padding-inline-start: 50px;
+  }
+}
+
+.product__content { 
+  padding-top: 20px;
+}
+
+.product__content .product__price__wrap [data-price-wrapper] {
+  font-size: 1.6rem;
+}
+
+.product__photo {
+  background: var(--bg-blur);
+  padding-top: 100%;
+}
+
+.product__thumb {
+  border-radius: 1rem;
+  padding: 0;
+  overflow: hidden;
+}
+
+.product__thumb.is-active:after {
+  opacity: 0 !important;
+}
+
+.product__thumb.is-active {
+  border: 1px solid #000;
+}
+
+.btn {
+  padding: calc(var(--btn-top) + 4px) var(--btn-left);
+}
+
+zoom-images {
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 3.5rem;
+}
+
+.product__thumbs {
+  margin-top: 25px;
+}
+
+.bundle-image {
+  border: 1px solid rgba(0,0,0,.25);
+  border-radius: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
+  max-width: 27em;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.bundle-image:hover {
+  opacity: 0.5;
+}
+
+.bundle-image img {
+  width: 130px;
+  height: auto;
+  user-drag: none;       /* Safari and old browsers */
+  -webkit-user-drag: none; /* Chrome, Safari */
+  -khtml-user-drag: none;  /* Older Konqueror */
+  -moz-user-drag: none;    /* Firefox (not always needed) */
+  -o-user-drag: none;      /* Opera */
+  user-select: none;       /* Prevent selection (optional) */
+  pointer-events: auto;
+}

@@ -22,6 +22,7 @@
       "block_order": [
         "message_GDtqma"
       ],
+      "disabled": true,
       "settings": {
         "show_border": false,
         "layout": "slider",

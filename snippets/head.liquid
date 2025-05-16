@@ -9,7 +9,6 @@
 
   <meta name="theme-color" content="{{ scheme_accent }}">
   <link rel="canonical" href="{{ canonical_url }}">
-  {{ 'fa.min.css' | asset_url | stylesheet_tag }}
 
   <!-- ======================= 01 Theme V6.0.2 ========================= -->
 
@@ -319,6 +318,7 @@
   }
 
   :root {
+    --bg-blur: url({{ 'blur.png' | asset_url }}) no-repeat center/750px auto;
     --scrollbar-width: 0px;
 
     /* === Product grid sale tags ===*/
@@ -434,7 +434,7 @@
     --LETTER-SPACING-BODY: {{ settings.body_letter_spacing | divided_by: 1000.0 | append: 'em' }};
 
     --FONT-STACK-HEADING: 'PP Eiko', serif;
-    --FONT-WEIGHT-HEADING: 500;
+    --FONT-WEIGHT-HEADING: 400;
     --FONT-STYLE-HEADING: normal;
 
     --FONT-UPPERCASE-HEADING: {{ heading_font_uppercase }};
@@ -479,7 +479,7 @@
       --LAYOUT-OUTER-SMALL: 16px;
       --LAYOUT-GUTTER-SMALL: 16px;
     {%- else -%}
-      --LAYOUT-OUTER: 50px;
+      --LAYOUT-OUTER: 100px;
       --LAYOUT-GUTTER: 32px;
       --LAYOUT-OUTER-MEDIUM: 30px;
       --LAYOUT-GUTTER-MEDIUM: 22px;

@@ -1,0 +1,31 @@
+{% if block.settings.image %}
+  <div class="bundle-image">
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        padding: 4px 15px;
+      "
+    >
+      {{ block.settings.image | image_url: width: 400 | image_tag }}
+      <div>
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="15" cy="15" r="15" fill="#E3F98A"/>
+          <rect x="14" y="7" width="2" height="16" rx="1" fill="black"/>
+          <rect x="23" y="14" width="2" height="16" rx="1" transform="rotate(90 23 14)" fill="black"/>
+        </svg>
+      </div>
+    </div>
+
+    <div style="padding: 4px 24px;">
+      <div>
+        <span style="font-size: 1.13rem;"
+          ><span style="background: linear-gradient(45deg, #B4FFC4 0%, #C4FFA7 32%, #5BFAFF 100%); padding: 0px 3px;"
+            >{{block.settings.text_gift_price}}</span
+          >{{block.settings.text_gift_unit}}</span
+        ><br>
+        <span style="font-size: 0.75rem;">{{block.settings.text_gift}}<span style="opacity: 0.5; padding-left: 3px">{{block.settings.text_gift_value}}</span></span>
+      </div>
+    </div>
+  </div>
+{% endif %}

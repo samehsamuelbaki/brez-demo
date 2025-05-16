@@ -10,7 +10,7 @@
     assign show_newsletter = false
   endif
 
-  assign button_text = 'products.product.add_to_cart' | t
+  assign button_text = 'SUBSCRIBE & SAVE'
   if preorder
     assign button_text =  'products.product.pre_order' | t
   endif
@@ -134,7 +134,13 @@
               class="btn {{ button_style }} {{ button_type }}"
               data-add-to-cart
               {% unless current_variant.available %}disabled="disabled"{% endunless %}>
-              <span class="btn__text" data-add-to-cart-text>{{ button_text }}</span>
+
+              <span class="btn__text" >{{ button_text }}
+              <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 6.5H18" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 0.5L18 6.5L12 12.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              </span>
               <span class="btn__added">&nbsp;</span>
 
               <span class="btn__loader">
