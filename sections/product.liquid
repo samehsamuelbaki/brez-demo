@@ -1,5 +1,37 @@
 <!-- /sections/product.liquid -->
 
+<script>
+  function updateIndexProductHeight() {
+  const indexProduct = document.querySelector('.index-product');
+  const main = document.querySelector('main');
+
+  if (indexProduct && main) {
+    const height = indexProduct.offsetHeight;
+    main.style.setProperty('--index-product-height', `${height}px`);
+  }
+}
+
+// Update on initial load
+window.addEventListener('load', updateIndexProductHeight);
+
+// Update on window resize
+window.addEventListener('resize', updateIndexProductHeight);
+</script>
+
+<style>
+  main::after {
+  content: '';
+  position: absolute;
+  top: calc(var(--index-product-height, 100vh));
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #FFFFFF 0%, #D5F8FC 27%, #F3E7FF 60%, #FFFFFF 100%);
+  z-index: -1; /* Put it behind main content */
+  pointer-events: none;
+}
+</style>
+
 {%- liquid
   assign current_variant = product.selected_or_first_available_variant
   assign enable_video_looping = section.settings.enable_video_looping
