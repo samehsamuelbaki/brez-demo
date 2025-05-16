@@ -51,7 +51,31 @@
   {%- endcomment -%}
   <!-- Paste marketing code or third party scripts below this comment line ============== -->
 
+  <script>
+    function toggleCard(card) {
+      const wrapper = card.querySelector('.faq-answer-wrapper');
+      const answer = card.querySelector('.faq-answer');
+      const icon = card.querySelector('.icon');
+      const isOpen = wrapper.style.height && wrapper.style.height !== "0px";
 
+      if (isOpen) {
+        wrapper.style.height = '0px';
+        icon.innerHTML = `
+        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 1L9 9L1 1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        `;
+      } else {
+        // Measure and set exact height for smooth transition
+        wrapper.style.height = answer.scrollHeight + 'px';
+        icon.innerHTML = `
+        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0.980103 8.96021L9.02 1.0003L16.9799 9.0402" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        `;
+      }
+    }
+  </script>
 
   <!-- And above this comment line ================================================== -->
 </body>

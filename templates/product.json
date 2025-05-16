@@ -55,7 +55,7 @@
             "image": "shopify:\/\/shop_images\/check-mark.svg",
             "icon_size": 20,
             "icon_color": "",
-            "text": "<p>Free 4-Pack of Shots ($24 Value)<\/p>",
+            "text": "<p>Free Water Bottle ($30 Value)<\/p>",
             "text_font_size": "body-small",
             "width": "full",
             "padding_bottom": 10
@@ -68,7 +68,7 @@
             "image": "shopify:\/\/shop_images\/check-mark.svg",
             "icon_size": 20,
             "icon_color": "",
-            "text": "<p>Change or cancel at anytime<\/p>",
+            "text": "<p>Free Shipping<\/p>",
             "text_font_size": "body-small",
             "width": "full",
             "padding_bottom": 10
@@ -81,7 +81,7 @@
             "image": "shopify:\/\/shop_images\/check-mark.svg",
             "icon_size": 20,
             "icon_color": "",
-            "text": "<p>30-Day Guarantee<\/p>",
+            "text": "<p>Change or cancel anytime<\/p>",
             "text_font_size": "body-small",
             "width": "full",
             "padding_bottom": 10
@@ -94,7 +94,7 @@
             "image": "shopify:\/\/shop_images\/check-mark.svg",
             "icon_size": 20,
             "icon_color": "",
-            "text": "<p>Free US Shipping<\/p>",
+            "text": "<p>30-Day Guarantee<\/p>",
             "text_font_size": "body-small",
             "width": "full",
             "padding_bottom": 20
@@ -295,15 +295,6 @@
     "section_multicolumn_z6EdBd": {
       "type": "section-multicolumn",
       "blocks": {
-        "review_UVCM7a": {
-          "type": "review",
-          "settings": {
-            "column_width": 33,
-            "title": "\"Fun times\"",
-            "text": "Absolutely love these products! Always have a good, relaxing time with no hangover! Thank you Brēz.",
-            "name": "Kathy H."
-          }
-        },
         "review_NiXCdL": {
           "type": "review",
           "settings": {
@@ -311,6 +302,15 @@
             "title": "\"Life changing\"",
             "text": "Best way to relax at the end of a day without a raging hangover the next day. Tastes great and mixes well.",
             "name": "Erin D."
+          }
+        },
+        "review_UVCM7a": {
+          "type": "review",
+          "settings": {
+            "column_width": 33,
+            "title": "\"Fun times\"",
+            "text": "Absolutely love these products! Always have a good, relaxing time with no hangover! Thank you Brēz.",
+            "name": "Kathy H."
           }
         },
         "review_nMjUF7": {
@@ -324,8 +324,8 @@
         }
       },
       "block_order": [
-        "review_UVCM7a",
         "review_NiXCdL",
+        "review_UVCM7a",
         "review_nMjUF7"
       ],
       "name": "Multicolumn",
@@ -387,7 +387,186 @@
         "width": "wrapper",
         "color_scheme": "scheme-590b0a64-4958-403a-86fc-4b0b784b17ff",
         "padding_top": 0,
-        "padding_bottom": 54
+        "padding_bottom": 0
+      }
+    },
+    "section_rich_text_p6TeML": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading_TttgjX": {
+          "type": "heading",
+          "settings": {
+            "title": "As seen in",
+            "heading_font_size": "heading-large",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TttgjX"
+      ],
+      "custom_css": [
+        "h2 {font-size: 3.5rem;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "text-center",
+        "width": "wrapper",
+        "color_scheme": "scheme-590b0a64-4958-403a-86fc-4b0b784b17ff",
+        "overlay_opacity": 0,
+        "show_overlay_text": false,
+        "padding_top": 100,
+        "padding_bottom": 40
+      }
+    },
+    "section_announcement_kM6QQ8": {
+      "type": "section-announcement",
+      "blocks": {
+        "image_YG97gJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Forbes_logo_1.png",
+            "image_width": 130
+          }
+        },
+        "image_WYpkfy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CNBC_logo_1.png",
+            "image_width": 70
+          }
+        },
+        "image_eytyjM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/VICE_LOGO_BLACK-e1617894708861_1.png",
+            "image_width": 130
+          }
+        },
+        "image_MfCiGX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/USA_Today__2020-01-29_1.png",
+            "image_width": 170
+          }
+        },
+        "image_yneexY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector.png",
+            "image_width": 180
+          }
+        },
+        "image_9CpytD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-2_1.png",
+            "image_width": 70
+          }
+        }
+      },
+      "block_order": [
+        "image_YG97gJ",
+        "image_WYpkfy",
+        "image_eytyjM",
+        "image_MfCiGX",
+        "image_yneexY",
+        "image_9CpytD"
+      ],
+      "name": "Scrolling text",
+      "settings": {
+        "slider_speed": 7,
+        "text_alignment": "center",
+        "marquee_speed": 50,
+        "direction": "ticker-rtl",
+        "message_spacing": 25,
+        "show_border": false,
+        "layout": "marquee",
+        "color_scheme": "scheme-590b0a64-4958-403a-86fc-4b0b784b17ff",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "section_rich_text_rpaRFV": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading_wJxGTt": {
+          "type": "heading",
+          "settings": {
+            "title": "FAQ",
+            "heading_font_size": "heading-large",
+            "padding_bottom": 0,
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wJxGTt"
+      ],
+      "custom_css": [
+        "h2 {font-size: 5.6rem;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "text-center",
+        "width": "wrapper",
+        "color_scheme": "scheme-590b0a64-4958-403a-86fc-4b0b784b17ff",
+        "overlay_opacity": 0,
+        "show_overlay_text": false,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "section_multicolumn_LHQxE9": {
+      "type": "section-multicolumn",
+      "blocks": {
+        "faq_zNJNHF": {
+          "type": "faq",
+          "settings": {
+            "column_width": 33,
+            "title": "What does it feel like?",
+            "text": "Most first feel a quick, energizing, happy euphoria followed by a sense of relief and relaxation. Unlike traditional edibles, we utilize fast-acting micronized extracts that are felt within 5 minutes and last up to 1.5 hours."
+          }
+        },
+        "faq_HXrWfm": {
+          "type": "faq",
+          "settings": {
+            "column_width": 33,
+            "title": "Is this legal?",
+            "text": "Yes, we utilized federally legal hemp and lion's mane mushroom to create something special. The Delta-9 THC in our drinks is naturally-derived from hemp (Cannabis sativa L.) and is no more than 0.3% of the product's net weight, ensuring full compliance with the 2018 Farm Bill."
+          }
+        },
+        "faq_FzWdcF": {
+          "type": "faq",
+          "settings": {
+            "column_width": 33,
+            "title": "Will I get anxious or paranoid?",
+            "text": "Highly unlikely—due to our unique addition of Lion's Mane extract, our microdosed approach to THC, and our rapid-absorption micronization process, we've created what we see as the solution to the bad edible trip."
+          }
+        }
+      },
+      "block_order": [
+        "faq_zNJNHF",
+        "faq_HXrWfm",
+        "faq_FzWdcF"
+      ],
+      "name": "Multicolumn",
+      "settings": {
+        "reviews": false,
+        "stretch": false,
+        "title": "",
+        "heading_font_size": "heading-medium",
+        "description": "",
+        "align_heading": "text-left",
+        "align_text": "text-left",
+        "width": "wrapper--full-padded",
+        "align_columns": "flex-align-top",
+        "layout_mobile": "1",
+        "color_scheme": "scheme-590b0a64-4958-403a-86fc-4b0b784b17ff",
+        "padding_top": 0,
+        "padding_bottom": 50,
+        "heading_tag": "automatic"
       }
     }
   },
@@ -398,6 +577,10 @@
     "section_rich_text_ncKkyx",
     "section_multicolumn_z6EdBd",
     "section_rich_text_dBhjQY",
-    "section_custom_code_Nrh4kJ"
+    "section_custom_code_Nrh4kJ",
+    "section_rich_text_p6TeML",
+    "section_announcement_kM6QQ8",
+    "section_rich_text_rpaRFV",
+    "section_multicolumn_LHQxE9"
   ]
 }

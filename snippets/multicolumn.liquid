@@ -380,6 +380,37 @@
                   </div>
                 </div>
 
+              {%- when 'faq' -%}
+                <div class="grid-item"
+                  {{ block_style }}
+                  {% if enable_slider %}
+                    data-grid-item
+                  {% endif %}
+                  {{ block.shopify_attributes }}
+                >
+                  <div class="column__inner"
+                    data-aos="hero"
+                    data-aos-anchor="{{ animation_anchor }}"
+                    data-aos-order="{{ animation_order }}">
+
+                      <div class="faq-card" onclick="toggleCard(this)">
+                        <div class="faq-question">
+                          <span>{{block.settings.title}}</span>
+                          <span class="icon">
+                            <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 1L9 9L1 1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </span>
+                        </div>
+                        <div class="faq-answer-wrapper">
+                          <div class="faq-answer">
+                            {{block.settings.text}}
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
               {%- when 'icon' -%}
                 {%- capture icon_style -%}
                   --icon-size: {{ icon_size }}px;
